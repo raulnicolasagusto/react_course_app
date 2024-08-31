@@ -3,6 +3,7 @@ import { ScrollView, Text, View, Image } from 'react-native';
 import {Link} from 'expo-router';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { images } from '../constants'
+import CustomButton from '../components/CustomButton';
 
 
 export default function App() {
@@ -28,8 +29,19 @@ export default function App() {
               <Text className="text-3xl text-white font-bold text-center">
                   Discover Endless Posibilities with{' '}<Text className="text-secondary-200">Aora!</Text>
               </Text>
-
+              <Image
+                source={images.path}
+                className="w-[136] h-[15px] absolute -bottom-2 -right-8"
+                resizeMode='contain'                
+              />              
            </View>
+           <Text className="text-sm font-pregular text-gray-100 mt-7">Where creativity meets innovation: embark on a jurney of limitless
+            exploration with Aora </Text>
+            <CustomButton
+              title="Continue with Email"
+              handlePress={()=>{}}
+              containerStyles="w-full m-7"
+            />
 
           </View>
         </ScrollView>
